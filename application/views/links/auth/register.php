@@ -34,29 +34,22 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
-
+                <div id="message"></div>
                 <!-- Registration Form -->
-                <form id="register" method="POST" action="" class="well" role="form">
-                    <!-- First Name -->
+                <form id="register" method="POST" action="<?=base_url('auth/create') ?>" class="well" autocomplete="off"
+                    id="registerForm">
+                    <!-- Username -->
                     <div class="form-group">
-                        <label for="first_name">First Name</label>
-                        <input type="text" class="form-control" name="first_name" id="first_name"
-                            placeholder="Enter First Name">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" name="username" id="username"
+                            placeholder="Enter Username">
                     </div>
-                    <!-- End First Name -->
-
-                    <!-- Last Name -->
-                    <div class="form-group">
-                        <label for="last_name">Last Name</label>
-                        <input type="text" class="form-control" name="last_name" id="last_name"
-                            placeholder="Enter Last Name">
-                    </div>
-                    <!-- End Last Name -->
+                    <!-- End Username -->
 
                     <!-- Email Address -->
                     <div class="form-group">
                         <label>Email Address</label>
-                        <input type="text" class="form-control" name="email" id="email" placeholder="Enter Email">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email">
                     </div>
                     <!-- End Email Address -->
 
@@ -100,3 +93,14 @@
         </div>
     </div>
 </section>
+<script type="text/javascript" src="<?= base_url('custom/js/register.js') ?>"></script>
+
+<script>
+function clearForm() {
+    $('input[type="text"]').val('');
+    $('input[type="email"]').val('');
+    $('input[type="password"]').val('');
+    $('select').val('');
+    $(".fileinput-remove-button").click();
+}
+</script>
