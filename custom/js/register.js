@@ -17,6 +17,7 @@ $(document).ready(function () {
                         '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' +
                         response.messages +
                         '</div>');
+                        clearForm();
                 }
                 else {
                     if (response.messages instanceof Object) {
@@ -39,7 +40,7 @@ $(document).ready(function () {
                         $(".text-danger").remove();
                         $(".form-group").removeClass('has-error').removeClass('has-success');
 
-                        $("#message").html('<div class="alert alert-warning alert-dismissible" role="alert">' +
+                        $("#message").html('<div class="alert alert-danger alert-dismissible" role="alert">' +
                             '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
                             response.messages +
                             '</div>');
@@ -51,3 +52,11 @@ $(document).ready(function () {
         return false;
     });
 });
+
+function clearForm() {
+    $('input[type="text"]').val('');
+    $('input[type="email"]').val('');
+    $('input[type="password"]').val('');
+    $('select').val('');
+    $(".fileinput-remove-button").click();
+}

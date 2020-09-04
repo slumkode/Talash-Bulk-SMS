@@ -12,7 +12,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li id="DashboardNav"><a href="index.html"><span class="glyphicon glyphicon-dashboard"
+                <li id="DashboardNav"><a href="<?=base_url('dashboard')?>"><span class="glyphicon glyphicon-dashboard"
                             aria-hidden="true"></span> Dashboard</a></li>
                 <li id="OutboxNav"><a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
                         Outbox</a></li>
@@ -46,7 +46,7 @@
                         </li>
                         <!-- <li><a href="#">Change Theme</a></li> -->
                         <li role="separator" class="divider"></li>
-                        <li><a href="<?=base_url('auth')?>"><span class="glyphicon glyphicon-log-out"
+                        <li><a href="<?=base_url('auth/logout')?>"><span class="glyphicon glyphicon-log-out"
                                     aria-hidden="true"></span>
                                 Logout</a></li>
                     </ul>

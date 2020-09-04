@@ -34,12 +34,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
+                <div id="message"></div>
                 <!-- Login Form -->
-                <form id="login" method="POST" action="" class="well" role="form">
+                <form id="loginForm" method="POST" action="<?= base_url('auth/login') ?>" class="well" role="form">
                     <!-- Email Address     -->
                     <div class="form-group">
-                        <label>Email Address</label>
-                        <input type="text" class="form-control" placeholder="Enter Email">
+                        <label>Username</label>
+                        <input type="text" class="form-control" name="username" id="username" placeholder="Username">
                     </div>
                     <!-- End Email Address -->
 
@@ -78,3 +79,5 @@
         </div>
     </div>
 </section>
+
+<script src="<?= base_url('custom/js/login.js')?>"></script>

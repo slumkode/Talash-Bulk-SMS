@@ -74,7 +74,7 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> 'mysql:host=localhost;dbname=tenda',
+	'dsn'	=> 'mysql:host=localhost;dbname=talash',
 	'hostname' => 'localhost',
 	'username' => 'tenda',
 	'password' => 'Preach13@29Qt!_',

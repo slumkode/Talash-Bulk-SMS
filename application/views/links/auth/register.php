@@ -36,8 +36,7 @@
             <div class="col-md-4 col-md-offset-4">
                 <div id="message"></div>
                 <!-- Registration Form -->
-                <form id="register" method="POST" action="<?=base_url('auth/create') ?>" class="well" autocomplete="off"
-                    id="registerForm">
+                <form id="registerForm" method="POST" action="<?= base_url('auth/create') ?>" class="well">
                     <!-- Username -->
                     <div class="form-group">
                         <label for="username">Username</label>
@@ -49,7 +48,7 @@
                     <!-- Email Address -->
                     <div class="form-group">
                         <label>Email Address</label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email">
+                        <input type="text" class="form-control" name="email" id="email" placeholder="Enter Email">
                     </div>
                     <!-- End Email Address -->
 
@@ -77,7 +76,7 @@
 
                     <!-- Login Link -->
                     <div class="form-group">
-                        <p class="text-muted">Have an account? <a href="<?= base_url('auth/login') ?>">Login</a>
+                        <p class="text-muted">Have an account? <a href="<?= base_url('auth') ?>">Login</a>
                         </p>
                     </div>
                     <!-- End Login Link -->
@@ -93,14 +92,4 @@
         </div>
     </div>
 </section>
-<script type="text/javascript" src="<?= base_url('custom/js/register.js') ?>"></script>
-
-<script>
-function clearForm() {
-    $('input[type="text"]').val('');
-    $('input[type="email"]').val('');
-    $('input[type="password"]').val('');
-    $('select').val('');
-    $(".fileinput-remove-button").click();
-}
-</script>
+<script src="<?=base_url('custom/js/register.js') ?>"></script>
